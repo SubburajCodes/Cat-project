@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section>
+        <div class="2xl:container mx-auto bg-black">
+            <div class="w-[80%] mx-auto grid grid-cols-1 h-screen">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="flex flex-col justify-center items-center"> <!--ON-->
+                      <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt="bulb-on" class="w-[20%] hidden" id="bulbon">                   
+                      <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="cat-on" class="w-[30%] hidden" id="catview">  
+                    </div>
+                     <div class="flex flex-col justify-center items-center">  <!--OFF-->
+                      <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png" alt="bulb-off" class="w-[20%]" id="bulboff">
+                      <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png" alt="cat-off" class="w-[30%] " id="catrun">
+                    </div>
+                   <div class="flex justify-center items-center gap-5 w-20 p-7">
+                        <button class="bg-white text-black px-3 rounded-lg py-2" id="offbtn">OFF</button>
+                        <button class="bg-white text-black px-4 rounded-lg py-2" id="onbtn">ON</button>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+
+    <script>
+        const bulbon=document.getElementById("bulbon")
+        const bulboff=document.getElementById("bulboff")
+        const catview=document.getElementById("catview")
+        const catrun=document.getElementById("catrun")
+        const offbtn=document.getElementById("offbtn")
+        const onbtn=document.getElementById("onbtn")
+
+
+        onbtn.addEventListener("click",()=>{
+            bulbon.classList.remove("hidden")
+            catview.classList.remove("hidden") 
+            bulboff.classList.add("hidden")
+            catrun.classList.add("hidden")
+           
+        })
+
+        offbtn.addEventListener("click",()=>{
+            bulbon.classList.add("hidden")
+            catview.classList.add("hidden") 
+            bulboff.classList.remove("hidden")
+            catrun.classList.remove("hidden")
+        })
+
+
+
+
+    </script>
+
+</body>
+</html>
